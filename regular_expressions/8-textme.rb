@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
-log = ARGV[0]
-regex = /\[FROM:(.*?)\] \[TO:(.*?)\] \[FLAGS:(.*?)\]/
-match = log.match(regex)
-if match
-  puts "#{match[1]},#{match[2]},#{match[3]}"
-end
+
+from = ARGV[0].scan(/from:(.*?)\]/)
+to = ARGV[0].scan(/to:(.*?)\]/)
+flags = ARGV[0].scan(/flags:(.*?)\]/)
+puts [from, to, flags].join(',')
