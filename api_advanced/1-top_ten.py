@@ -17,7 +17,7 @@ def top_ten(subreddit):
         return
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    headers = {"User-Agent": "Python:top.ten:v1.0 (by /u/YourUsername)"}
+    headers = {"User-Agent": "Python:top.ten:v1.0 (by u/Fun-Designer6684)"}
     params = {"limit": 10}
 
     try:
@@ -37,4 +37,3 @@ def top_ten(subreddit):
 
     except Exception:
         print(None)
-
